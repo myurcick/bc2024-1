@@ -3,14 +3,27 @@ const { exec } = require('child_process');
 // use exec for copy user name
 exec('git config user.name', (error, stdout, stderr) => {
     if (error) {
-        console.error(`Помилка: ${error.message}`);
+        console.error(`пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ${error.message}`);
         return;
     }
     if (stderr) {
-        console.error(`Помилка: ${stderr}`);
+        console.error(`пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ${stderr}`);
         return;
     }
     //delete white
-    const githubUsername = stdout.trim();
-    console.log(`Hello, ${githubUsername}`);
+    const gitUser = stdout.trim();
+    console.log(`Hello, ${gitUser}`);
+});
+exec ('git config user.email' , (error, stdout, stderr) =>{
+if (error) {
+console.error(`пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ${error.message}`);
+return;
+}
+if (stderr) {
+        console.error(`пїЅпїЅпїЅпїЅпїЅпїЅпїЅ: ${stderr}`);
+        return;
+    }
+const gitUseremail = stdout.trim();
+console.log(`Your email:, ${gitUseremail}`);
+
 });
