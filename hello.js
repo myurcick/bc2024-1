@@ -25,5 +25,6 @@ if (stderr) {
     }
 const gitUseremail = stdout.trim();
 console.log(`Your email:, ${gitUseremail}`);
+// to give users email
 
 });
