@@ -1,3 +1,6 @@
+
+console.log(`Hello, myurcick bc2024-1`);
+
 const { exec } = require('child_process');
 
 // use exec for copy user name
